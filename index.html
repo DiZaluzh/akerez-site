@@ -3,85 +3,191 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Akerez Software — Thoughtful tools for focused learning</title>
-  <meta name="description" content="Akerez Software creates clear, practical applications for independent learning. Home of ProVerbs, a French conjugation practice app for iPhone.">
+  <title>AKEREZ — Everything starts with an idea</title>
+  <meta name="description" content="AKEREZ creates thoughtful digital products and software. Home of Verbs and Invoice Book.">
+  <meta name="theme-color" content="#EFEAD9">
   <link rel="canonical" href="https://akerez.com/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Akerez Software">
-  <meta property="og:title" content="Akerez Software">
-  <meta property="og:description" content="Thoughtful tools for focused learning. Home of ProVerbs.">
+  <meta property="og:site_name" content="AKEREZ">
+  <meta property="og:title" content="AKEREZ">
+  <meta property="og:description" content="Everything starts with an idea.">
   <meta property="og:url" content="https://akerez.com/">
-  <meta property="og:image" content="https://akerez.com/assets/app-icon.png">
+  <meta property="og:image" content="https://akerez.com/assets/apple-touch-icon.png">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("akerez-lang");
+        var nav = (navigator.language || "en").toLowerCase();
+        var lang = stored || (nav.indexOf("fr") === 0 ? "fr" : nav.indexOf("uk") === 0 ? "uk" : "en");
+        if (lang !== "en" && lang !== "fr" && lang !== "uk") lang = "en";
+        document.documentElement.lang = lang;
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Akerez Software",
+    "name": "AKEREZ",
     "url": "https://akerez.com/",
     "email": "support@akerez.com",
-    "brand": {
-      "@type": "SoftwareApplication",
-      "name": "ProVerbs",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "iOS",
-      "url": "https://akerez.com/proverbs"
-    }
+    "brand": [
+      { "@type": "Brand", "name": "Verbs" },
+      { "@type": "Brand", "name": "Invoice Book" }
+    ]
   }
   </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<body data-nav="home" data-title="meta.home.title" data-description="meta.home.desc">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header">
-    <div class="site-header__inner">
+    <div class="shell site-header__bar">
       <a class="brand" href="/">
-        <img class="brand__mark" src="/assets/app-icon.png" width="32" height="32" alt="">
-        <span>Akerez Software</span>
+        <span class="mark" aria-hidden="true"></span>
+        <span class="wordmark" role="img" aria-label="AKEREZ"></span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="/" aria-current="page">Akerez Software</a>
-        <a href="/proverbs/">ProVerbs</a>
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
+      <div class="site-header__tools">
+        <div class="lang" role="group" data-i18n-aria="lang.label" aria-label="Language">
+          <button type="button" data-set-lang="en" lang="en">EN</button>
+          <button type="button" data-set-lang="fr" lang="fr">FR</button>
+          <button type="button" data-set-lang="uk" lang="uk">UK</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-aria="nav.open" aria-label="Menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav class="nav" id="site-nav" data-i18n-aria="nav.label" aria-label="Primary">
+        <a href="/" data-nav-link="home" data-i18n="nav.home">Home</a>
+        <a href="/products/" data-nav-link="products" data-i18n="nav.products">Products</a>
+        <a href="/work/" data-nav-link="work" data-i18n="nav.work">Work</a>
+        <a href="/about/" data-nav-link="about" data-i18n="nav.about">About</a>
+        <a href="/contact/" data-nav-link="contact" data-i18n="nav.contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="shell">
-    <section class="hero" aria-labelledby="home-heading">
-      <p class="hero__eyebrow">Akerez Software</p>
-      <h1 id="home-heading">Thoughtful tools for focused learning</h1>
-      <p class="lede">Akerez Software creates clear, practical applications designed to make independent learning more structured and rewarding.</p>
-    </section>
-
-    <article class="card product-card" aria-labelledby="proverbs-card-heading">
-      <img class="product-card__icon" src="/assets/app-icon.png" width="88" height="88" alt="ProVerbs app icon">
-      <div>
-        <p class="pill">iPhone</p>
-        <h2 id="proverbs-card-heading">ProVerbs</h2>
-        <p>Master French verbs with focused practice — conjugations, custom exercises, a conjugator, and progress you can trust.</p>
-        <div class="product-card__actions">
-          <a class="button button--primary" href="/proverbs/">Explore ProVerbs</a>
-          <a class="button button--ghost" href="/support/">Support</a>
-          <a class="button button--ghost" href="/privacy/">Privacy</a>
+  <main id="main">
+    <section class="shell hero" aria-labelledby="home-heading">
+      <div class="hero__copy">
+        <span class="wordmark wordmark--display" role="img" aria-label="AKEREZ"></span>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Independent software</p>
+        <h1 id="home-heading" data-i18n="hero.title">Everything starts with an idea.</h1>
+        <p class="lede" data-i18n="hero.lede">AKEREZ creates thoughtful digital products and software — designed with care, and built to stay useful.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="/products/" data-i18n="hero.primary">View products</a>
+          <a class="button button--quiet" href="/contact/" data-i18n="hero.secondary">Start a project</a>
         </div>
       </div>
-    </article>
+      <div class="hero__figure">
+        <div class="hero__frame">
+          <span class="mark mark--hero" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell section" aria-labelledby="products-heading">
+      <div class="section__intro">
+        <p class="eyebrow" data-i18n="products.kicker">Products</p>
+        <h2 id="products-heading" data-i18n="products.heading">Software we make</h2>
+        <p data-i18n="products.intro">AKEREZ products stand on their own. Each one is built to be used, returned to, and grown over time.</p>
+      </div>
+      <div data-mount="products" data-layout="feature" data-heading="h3">
+        <article class="product-feature">
+          <a class="product-feature__link" href="/products/verbs/">
+            <div class="product-feature__copy">
+              <p class="meta-line">01 — iPhone · French verbs</p>
+              <h3 class="product-feature__name">Verbs</h3>
+              <p class="product-feature__summary">Focused conjugation practice — exercises, a conjugator, and progress that stays on the device.</p>
+              <span class="more">View product</span>
+            </div>
+            <div class="stage stage--verbs" aria-hidden="true">
+              <p class="stage__infinitive">être</p>
+              <p class="stage__line"><span>présent</span> nous sommes</p>
+              <span class="stage__bar"></span>
+              <span class="stage__bar stage__bar--short"></span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="why-heading">
+      <div class="shell band__inner">
+        <p class="eyebrow" data-i18n="why.kicker">Why AKEREZ</p>
+        <h2 id="why-heading" data-i18n="why.heading">Small beginnings. Built to grow.</h2>
+        <p data-i18n="why.body">Great products often start small: an idea, a problem worth solving, a first version. With thoughtful design and continuous development, they can grow into something people rely on every day.</p>
+        <a class="more" href="/about/" data-i18n="why.link">About AKEREZ</a>
+      </div>
+    </section>
+
+    <section class="shell section work-block" aria-labelledby="work-heading">
+      <div class="section__intro">
+        <p class="eyebrow" data-i18n="work.kicker">Selected work</p>
+        <h2 id="work-heading" data-i18n="work.heading">Custom work, kept apart</h2>
+        <p data-i18n="work.intro">A short record of selected collaborations. This is not the product catalogue.</p>
+      </div>
+      <div class="index-list" data-mount="work" data-layout="index" data-heading="h3">
+        <article class="index-row">
+          <a class="index-row__link" href="/work/berry/">
+            <span class="index-row__num">01</span>
+            <h3 class="index-row__name">BERRY</h3>
+            <span class="index-row__summary">A public site and visit experience for an independent beauty studio. Custom work — not an AKEREZ product.</span>
+            <span class="index-row__meta">Montréal · Studio</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section" aria-labelledby="custom-heading">
+      <div class="quiet">
+        <div>
+          <p class="eyebrow" data-i18n="custom.kicker">Alongside the products</p>
+          <h2 id="custom-heading" data-i18n="custom.heading">Have a project in mind?</h2>
+        </div>
+        <div>
+          <p data-i18n="custom.body">AKEREZ also takes on a small number of custom projects. The products come first.</p>
+          <ul class="service-line">
+            <li data-i18n="custom.s1">Websites</li>
+            <li data-i18n="custom.s2">Web applications</li>
+            <li data-i18n="custom.s3">Mobile applications</li>
+            <li data-i18n="custom.s4">Custom software</li>
+          </ul>
+          <div class="cluster">
+            <a class="button button--quiet" href="/contact/" data-i18n="custom.cta">Start a project</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>© 2026 Akerez Software</p>
+    <div class="shell site-footer__inner">
+      <div>
+        <span class="wordmark wordmark--light" role="img" aria-label="AKEREZ"></span>
+        <p data-i18n="footer.tag">Thoughtful digital products.</p>
+      </div>
       <nav aria-label="Footer">
-        <a href="/proverbs/">ProVerbs</a>
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
+        <a href="/products/" data-i18n="nav.products">Products</a>
+        <a href="/work/" data-i18n="nav.work">Work</a>
+        <a href="/about/" data-i18n="nav.about">About</a>
+        <a href="/contact/" data-i18n="nav.contact">Contact</a>
+        <a href="/support/" data-i18n="footer.support">Support</a>
+        <a href="/privacy/" data-i18n="footer.privacy">Privacy</a>
       </nav>
+      <div class="footer-meta">
+        <a href="mailto:support@akerez.com">support@akerez.com</a>
+        <p>© <span id="year">2026</span> AKEREZ</p>
+      </div>
     </div>
   </footer>
+  <script src="/assets/messages.js"></script>
+  <script src="/assets/catalog.js"></script>
+  <script src="/assets/site.js"></script>
 </body>
 </html>

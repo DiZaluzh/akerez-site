@@ -3,114 +3,152 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ProVerbs Support — Akerez Software</title>
-  <meta name="description" content="Get help with ProVerbs: contact support@akerez.com, restore purchases, manage subscriptions, and find answers about translations, Hint Mode, Learning Mode and more.">
+  <title>ProVerbs Support — AKEREZ</title>
+  <meta name="description" content="Help with ProVerbs: support@akerez.com, purchases, subscriptions, translations, Hint Mode, and Learning Mode.">
+  <meta name="theme-color" content="#EFEAD9">
   <link rel="canonical" href="https://akerez.com/support/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Akerez Software">
-  <meta property="og:title" content="ProVerbs Support">
-  <meta property="og:description" content="Need help with ProVerbs? Contact Akerez Software support.">
+  <meta property="og:site_name" content="AKEREZ">
+  <meta property="og:title" content="ProVerbs Support — AKEREZ">
+  <meta property="og:description" content="Help with ProVerbs: support@akerez.com, purchases, subscriptions, translations, Hint Mode, and Learning Mode.">
   <meta property="og:url" content="https://akerez.com/support/">
-  <meta property="og:image" content="https://akerez.com/assets/app-icon.png">
+  <meta property="og:image" content="https://akerez.com/assets/apple-touch-icon.png">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("akerez-lang");
+        var nav = (navigator.language || "en").toLowerCase();
+        var lang = stored || (nav.indexOf("fr") === 0 ? "fr" : nav.indexOf("uk") === 0 ? "uk" : "en");
+        if (lang !== "en" && lang !== "fr" && lang !== "uk") lang = "en";
+        document.documentElement.lang = lang;
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<body data-nav="" data-title="meta.support.title" data-description="meta.support.desc">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header">
-    <div class="site-header__inner">
+    <div class="shell site-header__bar">
       <a class="brand" href="/">
-        <img class="brand__mark" src="/assets/app-icon.png" width="32" height="32" alt="">
-        <span>Akerez Software</span>
+        <span class="mark" aria-hidden="true"></span>
+        <span class="wordmark" role="img" aria-label="AKEREZ"></span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="/">Akerez Software</a>
-        <a href="/proverbs/">ProVerbs</a>
-        <a href="/support/" aria-current="page">Support</a>
-        <a href="/privacy/">Privacy</a>
+      <div class="site-header__tools">
+        <div class="lang" role="group" data-i18n-aria="lang.label" aria-label="Language">
+          <button type="button" data-set-lang="en" lang="en">EN</button>
+          <button type="button" data-set-lang="fr" lang="fr">FR</button>
+          <button type="button" data-set-lang="uk" lang="uk">UK</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-aria="nav.open" aria-label="Menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav class="nav" id="site-nav" data-i18n-aria="nav.label" aria-label="Primary">
+        <a href="/" data-nav-link="home" data-i18n="nav.home">Home</a>
+        <a href="/products/" data-nav-link="products" data-i18n="nav.products">Products</a>
+        <a href="/work/" data-nav-link="work" data-i18n="nav.work">Work</a>
+        <a href="/about/" data-nav-link="about" data-i18n="nav.about">About</a>
+        <a href="/contact/" data-nav-link="contact" data-i18n="nav.contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="shell shell--narrow">
-    <section class="hero" aria-labelledby="support-heading">
-      <h1 id="support-heading">ProVerbs Support</h1>
-      <p class="lede">Need help with ProVerbs, want to report an issue, or have a suggestion? Contact us and we’ll be happy to help.</p>
-    </section>
-
-    <section class="card contact-block" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <p>
-        Email:
-        <a href="mailto:support@akerez.com?subject=ProVerbs%20Support%20Request">support@akerez.com</a>
-      </p>
-      <p>When you write, please include:</p>
-      <ul class="feature-list">
-        <li>device model</li>
-        <li>iOS version</li>
-        <li>ProVerbs version</li>
-        <li>description of the issue</li>
-        <li>steps that reproduce it</li>
-        <li>screenshot if appropriate</li>
-      </ul>
-      <p class="note">Please do not send passwords, payment details, Apple ID credentials or other sensitive information.</p>
-    </section>
-
-    <section class="section" aria-labelledby="faq-heading">
-      <h2 id="faq-heading">Frequently asked questions</h2>
-      <div class="faq card">
-        <details>
-          <summary>How do I restore purchases?</summary>
-          <p>If ProVerbs offers an Apple subscription on your device, open <strong>Settings</strong> in the app and use <strong>Restore Purchases</strong>. Apple verifies your purchases with your Apple&nbsp;ID. Purchases are managed by Apple, not by Akerez Software.</p>
-        </details>
-        <details>
-          <summary>How do I manage or cancel a subscription?</summary>
-          <p>Subscriptions purchased through Apple are managed in your Apple&nbsp;ID settings. Use Apple’s official page:
-            <a href="https://apps.apple.com/account/subscriptions" rel="noopener noreferrer">Manage Apple subscriptions</a>.
-          </p>
-        </details>
-        <details>
-          <summary>When do translations and verb meanings appear?</summary>
-          <p>During practice, ProVerbs prefers a sentence translation when one is available for that prompt. If no sentence translation is available, it may show a concise verb meaning instead. Meanings and translations follow your selected interface language when present in the app’s offline content.</p>
-        </details>
-        <details>
-          <summary>What are Hint Mode and Learning Mode?</summary>
-          <p><strong>Hint Mode</strong> can assist while you type and tracks assisted answers separately from fully unassisted ones. <strong>Learning Mode</strong> can bring incorrect or skipped questions back for extra practice so you can strengthen weak forms without inflating the initial-round score.</p>
-        </details>
-        <details>
-          <summary>Are my custom exercises saved?</summary>
-          <p>Yes. Custom exercises and practice progress are stored on your device. Uninstalling the app, or clearing its data, removes locally stored exercises and statistics.</p>
-        </details>
-        <details>
-          <summary>How do I report an incorrect conjugation or translation?</summary>
-          <p>Email
-            <a href="mailto:support@akerez.com?subject=ProVerbs%20Content%20Report">support@akerez.com</a>
-            with the verb, mood and tense (or the sentence), what the app showed, and what you expected. Screenshots help.</p>
-        </details>
-        <details>
-          <summary>How do accents and the keyboard work?</summary>
-          <p>When a text answer field is focused, ProVerbs can show a French accent toolbar above the keyboard. You can also use your device’s French keyboard. Tapping empty space in the practice card can dismiss the keyboard without clearing what you already typed.</p>
-        </details>
-        <details>
-          <summary>Where can I find the installed ProVerbs version?</summary>
-          <p>Open ProVerbs → the app menu → <strong>Settings</strong>. The About section shows the installed version. You can also check <strong>iPhone Settings → General → iPhone Storage → ProVerbs</strong>. Include that version number in support emails.</p>
-        </details>
-      </div>
-    </section>
+  <main id="main">
+    <header class="shell page-hero">
+      <h1 data-i18n="supportPage.heading">ProVerbs Support</h1>
+      <p class="lede" data-i18n="supportPage.lede">Need help with ProVerbs, want to report an issue, or have a suggestion? Contact us and we’ll be happy to help.</p>
+    </header>
+    <div class="shell page-end stack">
+      <section class="card" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" data-i18n="supportPage.contact">Contact</h2>
+        <p>
+          <span data-i18n="supportPage.emailLead">Email</span>:
+          <a href="mailto:support@akerez.com?subject=ProVerbs%20Support%20Request">support@akerez.com</a>
+        </p>
+        <p data-i18n="supportPage.include">When you write, please include:</p>
+        <ul class="feature-list" data-i18n-list="supportPage.includeItems">
+          <li>device model</li>
+          <li>iOS version</li>
+          <li>ProVerbs version</li>
+          <li>description of the issue</li>
+          <li>steps that reproduce it</li>
+          <li>screenshot if appropriate</li>
+        </ul>
+        <p class="note" data-i18n="supportPage.sensitive">Please do not send passwords, payment details, Apple ID credentials or other sensitive information.</p>
+      </section>
+      <section aria-labelledby="faq-heading">
+        <h2 id="faq-heading" data-i18n="supportPage.faq">Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary data-i18n="supportPage.q1">How do I restore purchases?</summary>
+            <p data-i18n="supportPage.a1">If ProVerbs offers an Apple subscription on your device, open Settings in the app and use Restore Purchases. Apple verifies your purchases with your Apple ID. Purchases are managed by Apple, not by AKEREZ.</p>
+          </details>
+          <details>
+            <summary data-i18n="supportPage.q2">How do I manage or cancel a subscription?</summary>
+            <p><span data-i18n="supportPage.a2">Subscriptions purchased through Apple are managed in your Apple ID settings.</span>
+              <a href="https://apps.apple.com/account/subscriptions" rel="noopener noreferrer" data-i18n="supportPage.a2link">Manage Apple subscriptions</a>.
+            </p>
+          </details>
+          <details>
+            <summary data-i18n="supportPage.q3">When do translations and verb meanings appear?</summary>
+            <p data-i18n="supportPage.a3">During practice, ProVerbs prefers a sentence translation when one is available for that prompt. If no sentence translation is available, it may show a concise verb meaning instead. Meanings and translations follow your selected interface language when present in the app’s offline content.</p>
+          </details>
+          <details>
+            <summary data-i18n="supportPage.q4">What are Hint Mode and Learning Mode?</summary>
+            <p data-i18n="supportPage.a4">Hint Mode can assist while you type and tracks assisted answers separately from fully unassisted ones. Learning Mode can bring incorrect or skipped questions back for extra practice so you can strengthen weak forms without inflating the initial-round score.</p>
+          </details>
+          <details>
+            <summary data-i18n="supportPage.q5">Are my custom exercises saved?</summary>
+            <p data-i18n="supportPage.a5">Yes. Custom exercises and practice progress are stored on your device. Uninstalling the app, or clearing its data, removes locally stored exercises and statistics.</p>
+          </details>
+          <details>
+            <summary data-i18n="supportPage.q6">How do I report an incorrect conjugation or translation?</summary>
+            <p>
+              <span data-i18n="supportPage.a6">Email support@akerez.com with the verb, mood and tense (or the sentence), what the app showed, and what you expected. Screenshots help.</span>
+              <a href="mailto:support@akerez.com?subject=ProVerbs%20Content%20Report">support@akerez.com</a>
+            </p>
+          </details>
+          <details>
+            <summary data-i18n="supportPage.q7">How do accents and the keyboard work?</summary>
+            <p data-i18n="supportPage.a7">When a text answer field is focused, ProVerbs can show a French accent toolbar above the keyboard. You can also use your device’s French keyboard. Tapping empty space in the practice card can dismiss the keyboard without clearing what you already typed.</p>
+          </details>
+          <details>
+            <summary data-i18n="supportPage.q8">Where can I find the installed ProVerbs version?</summary>
+            <p data-i18n="supportPage.a8">Open ProVerbs, then the app menu, then Settings. The About section shows the installed version. You can also check iPhone Settings, General, iPhone Storage, ProVerbs. Include that version number in support emails.</p>
+          </details>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>© 2026 Akerez Software</p>
+    <div class="shell site-footer__inner">
+      <div>
+        <span class="wordmark wordmark--light" role="img" aria-label="AKEREZ"></span>
+        <p data-i18n="footer.tag">Thoughtful digital products.</p>
+      </div>
       <nav aria-label="Footer">
-        <a href="/proverbs/">ProVerbs</a>
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
+        <a href="/products/" data-i18n="nav.products">Products</a>
+        <a href="/work/" data-i18n="nav.work">Work</a>
+        <a href="/about/" data-i18n="nav.about">About</a>
+        <a href="/contact/" data-i18n="nav.contact">Contact</a>
+        <a href="/support/" data-i18n="footer.support">Support</a>
+        <a href="/privacy/" data-i18n="footer.privacy">Privacy</a>
       </nav>
+      <div class="footer-meta">
+        <a href="mailto:support@akerez.com">support@akerez.com</a>
+        <p>© <span id="year">2026</span> AKEREZ</p>
+      </div>
     </div>
   </footer>
+  <script src="/assets/messages.js"></script>
+  <script src="/assets/catalog.js"></script>
+  <script src="/assets/site.js"></script>
 </body>
 </html>

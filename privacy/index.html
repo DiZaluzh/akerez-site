@@ -3,54 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ProVerbs Privacy Policy — Akerez Software</title>
-  <meta name="description" content="Privacy Policy for the ProVerbs iOS app by Akerez Software. Learn how practice data is stored on your device and how optional Apple purchases may be handled.">
+  <title>ProVerbs Privacy Policy — AKEREZ</title>
+  <meta name="description" content="Privacy Policy for the ProVerbs iOS app by AKEREZ.">
+  <meta name="theme-color" content="#EFEAD9">
+  <meta name="robots" content="noindex">
   <link rel="canonical" href="https://akerez.com/privacy/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Akerez Software">
-  <meta property="og:title" content="ProVerbs Privacy Policy">
-  <meta property="og:description" content="How ProVerbs handles information on your device and when you contact support.">
+  <meta property="og:site_name" content="AKEREZ">
+  <meta property="og:title" content="ProVerbs Privacy Policy — AKEREZ">
+  <meta property="og:description" content="Privacy Policy for the ProVerbs iOS app by AKEREZ.">
   <meta property="og:url" content="https://akerez.com/privacy/">
-  <meta property="og:image" content="https://akerez.com/assets/app-icon.png">
+  <meta property="og:image" content="https://akerez.com/assets/apple-touch-icon.png">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("akerez-lang");
+        var nav = (navigator.language || "en").toLowerCase();
+        var lang = stored || (nav.indexOf("fr") === 0 ? "fr" : nav.indexOf("uk") === 0 ? "uk" : "en");
+        if (lang !== "en" && lang !== "fr" && lang !== "uk") lang = "en";
+        document.documentElement.lang = lang;
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<body data-nav="" data-title="meta.privacy.title" data-description="meta.privacy.desc">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header">
-    <div class="site-header__inner">
+    <div class="shell site-header__bar">
       <a class="brand" href="/">
-        <img class="brand__mark" src="/assets/app-icon.png" width="32" height="32" alt="">
-        <span>Akerez Software</span>
+        <span class="mark" aria-hidden="true"></span>
+        <span class="wordmark" role="img" aria-label="AKEREZ"></span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="/">Akerez Software</a>
-        <a href="/proverbs/">ProVerbs</a>
-        <a href="/support/">Support</a>
-        <a href="/privacy/" aria-current="page">Privacy</a>
+      <div class="site-header__tools">
+        <div class="lang" role="group" data-i18n-aria="lang.label" aria-label="Language">
+          <button type="button" data-set-lang="en" lang="en">EN</button>
+          <button type="button" data-set-lang="fr" lang="fr">FR</button>
+          <button type="button" data-set-lang="uk" lang="uk">UK</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-aria="nav.open" aria-label="Menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav class="nav" id="site-nav" data-i18n-aria="nav.label" aria-label="Primary">
+        <a href="/" data-nav-link="home" data-i18n="nav.home">Home</a>
+        <a href="/products/" data-nav-link="products" data-i18n="nav.products">Products</a>
+        <a href="/work/" data-nav-link="work" data-i18n="nav.work">Work</a>
+        <a href="/about/" data-nav-link="about" data-i18n="nav.about">About</a>
+        <a href="/contact/" data-nav-link="contact" data-i18n="nav.contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="shell shell--narrow policy">
-    <header class="hero">
+    <p class="notice" data-i18n="privacyNote">This policy is published in English.</p>
+    <header class="page-hero">
       <h1>ProVerbs Privacy Policy</h1>
-      <p class="lede">Effective date: 13 September 2026</p>
-      <p>This Privacy Policy describes how <strong>Akerez Software</strong> (“we”, “us”) handles information in connection with the <strong>ProVerbs</strong> iOS application and this website.</p>
+      <p class="lede">Draft for the first public monetised release · Last revised: 16 September 2026</p>
+      <p><strong>Status:</strong> This page is a <strong>draft</strong> prepared for the first public ProVerbs release that includes Google AdMob interstitial advertising and an optional Apple ad-free subscription. As of this revision, the iOS project has <strong>not</strong> yet linked the Google Mobile Ads SDK or Google’s User Messaging Platform (UMP) in a Release binary, and Release monetisation flags remain off. <strong>Do not treat this draft as the final published policy</strong> until the monetised build’s code, AdMob configuration, App Store Connect App Privacy answers, and this text have been checked against each other and this draft notice is removed.</p>
+      <p>This Privacy Policy describes how <strong>Diana Zaluzhna, operating as Akerez Software</strong> (“we”, “us”) handles information in connection with the <strong>ProVerbs</strong> iOS application and this website (<a href="https://akerez.com/">akerez.com</a>). <strong>Akerez Software</strong> is a brand name used by Diana Zaluzhna; it is not confirmed here as a separately registered company.</p>
       <p>Contact: <a href="mailto:support@akerez.com?subject=ProVerbs%20Privacy">support@akerez.com</a></p>
     </header>
 
     <section aria-labelledby="s-overview">
       <h2 id="s-overview">1. Overview</h2>
-      <p>ProVerbs is an educational app for practising French verb conjugations. The current App Store release is designed so that your practice history, custom exercises, settings and statistics are stored on your device. ProVerbs does not require an account and does not ask you to create a password.</p>
-      <p>This website (akerez.com) is a static informational site. It does not use cookies, analytics SDKs or advertising trackers.</p>
+      <p>ProVerbs is an educational app for practising French verb conjugations. It does not require an Akerez Software account and does not ask you to create a password. Practice history, custom exercises, settings and statistics are stored on your device.</p>
+      <p>In the monetised public release this draft describes, ProVerbs is intended to:</p>
+      <ul>
+        <li>show an interstitial advertisement from <strong>Google AdMob</strong> before a user without an active ad-free entitlement starts a <em>new</em> exercise or assessment; and</li>
+        <li>offer an optional <strong>auto-renewable Apple subscription</strong> that removes advertising while keeping all learning features available without payment.</li>
+      </ul>
+      <p>Advertising is not intended to appear before every question, during answer entry, or solely because you finish a session. If an ad fails to load or is dismissed, practice is intended to continue. Resume of an unfinished attempt is not intended to require a new interstitial.</p>
+      <p>This website is a static informational site. These privacy pages do not use cookies, analytics SDKs or advertising tags.</p>
     </section>
 
-    <section aria-labelledby="s-collect">
-      <h2 id="s-collect">2. Information the app stores on your device</h2>
+    <section aria-labelledby="s-device">
+      <h2 id="s-device">2. Information stored on your device</h2>
       <p>ProVerbs stores the following kinds of information locally on your iPhone using Apple frameworks such as SwiftData and UserDefaults:</p>
       <ul>
         <li>custom exercises you create and visibility preferences for exercises</li>
@@ -59,122 +92,180 @@
         <li>optional learning-target preferences used by the statistics experience</li>
       </ul>
       <p>This information stays on your device unless you choose to share it yourself (for example by emailing support). Uninstalling ProVerbs, or deleting the app’s data through iOS, removes the local store.</p>
+      <p>We do not operate an Akerez Software user account system or sign-in, do not enable iCloud / CloudKit sync for ProVerbs practice data, and do not run a ProVerbs backend that receives your conjugations or statistics. Core learning features do not request access to your location, contacts, camera, microphone or photo library.</p>
     </section>
 
-    <section aria-labelledby="s-not-collect">
-      <h2 id="s-not-collect">3. Information we do not collect through the app</h2>
-      <p>Based on the current production configuration of ProVerbs:</p>
+    <section aria-labelledby="s-ads">
+      <h2 id="s-ads">3. Advertising (Google AdMob)</h2>
+      <p><strong>Confirmed product intent for the monetised release:</strong> interstitial ads before starting a new exercise or assessment for users who are not entitled to the ad-free subscription; no intentional ads mid-question.</p>
+      <p><strong>Implementation status (unconfirmed until the Release binary is verified):</strong> the shipping ProVerbs Xcode project does not yet include the Google Mobile Ads package dependency, production AdMob application / unit identifiers, or a completed Release enablement of advertising. The statements in this section about live SDK behaviour apply only after those items ship and this draft is finalised.</p>
+      <p>When advertising is enabled, ad technology is provided by <strong>Google LLC</strong> through <strong>Google AdMob</strong>. Depending on your region, consent choices, Apple’s platform rules and the live AdMob configuration, ads may involve personalised or non-personalised delivery. This policy does <strong>not</strong> claim that ads are always non-personalised, that no identifiers are used, or that “no data is collected.”</p>
+      <h3 id="s-ads-data">3.1 Information Google’s ads SDK may process</h3>
+      <p>According to Google’s documentation for App Store data disclosure regarding the Google Mobile Ads SDK, the SDK may collect certain information from apps, including (as described by Google):</p>
       <ul>
-        <li>we do not operate an Akerez Software user account system or sign-in</li>
-        <li>we do not include analytics, advertising measurement or crash-reporting SDKs in the App Store build</li>
-        <li>we do not request access to your location, contacts, camera, microphone or photo library</li>
-        <li>we do not use App Tracking Transparency prompts, because the release build does not track you across other companies’ apps or websites</li>
-        <li>we do not enable iCloud / CloudKit sync for ProVerbs data</li>
-        <li>we do not run a ProVerbs backend that receives your conjugations or statistics</li>
+        <li>IP address, which may be used to estimate the general location of a device</li>
+        <li>non-user-related crash logs and related diagnostic information</li>
+        <li>performance data such as app launch time, hang rate or energy usage</li>
+        <li>a device identifier, such as an advertising identifier or other app- or developer-bounded identifiers</li>
+        <li>advertising data, such as advertisements you have seen</li>
+        <li>product interaction information (for example taps or video views related to ads)</li>
       </ul>
-      <p>Apple’s privacy manifest bundled with ProVerbs declares that the app does not track and does not list collected data types for third-party reporting. It declares use of the UserDefaults API for app functionality.</p>
+      <p>Google may use such information to serve and measure ads, improve advertising and related products, and for other purposes described in Google’s own policies. Optional AdMob features or mediation partners, if enabled in the shipping configuration, can involve additional data; this policy must be updated if that happens.</p>
+      <p>See
+        <a href="https://developers.google.com/admob/ios/privacy/data-disclosure" rel="noopener noreferrer">Google’s AdMob iOS data disclosure guidance</a>,
+        the
+        <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>,
+        and
+        <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">Google’s advertising technologies information</a>.
+      </p>
+      <p>Diana Zaluzhna, operating as Akerez Software, does not independently operate Google’s ad servers and does not invent retention periods for data held by Google.</p>
+      <h3 id="s-ads-purpose">3.2 Purpose</h3>
+      <p>Advertising is intended to support free access to ProVerbs. An active ad-free subscription (Section&nbsp;5) is intended to remove advertising for entitled users.</p>
+    </section>
+
+    <section aria-labelledby="s-consent">
+      <h2 id="s-consent">4. Consent and privacy choices (EEA, United Kingdom and Switzerland)</h2>
+      <p><strong>Confirmed AdMob console fact:</strong> a European regulations consent message has been created for ProVerbs and uses this Privacy Policy URL
+        (<a href="https://akerez.com/privacy/">https://akerez.com/privacy/</a>).
+      </p>
+      <p><strong>Implementation status (unconfirmed until the Release binary is verified):</strong> Google’s User Messaging Platform (UMP) SDK is not yet integrated in the ProVerbs app binary. In-app presentation of consent forms, checks such as whether ads may be requested, and a publisher privacy-options entry point are therefore <strong>not</strong> confirmed as present in a shipping build.</p>
+      <p>For the monetised release, the intended design is:</p>
+      <ul>
+        <li>use Google UMP so that, where Google’s tooling requires it (including the European Economic Area, the United Kingdom and Switzerland as determined by Google), privacy choices are gathered before ads are requested;</li>
+        <li>request ads only when Google’s consent APIs indicate that requesting ads is allowed; and</li>
+        <li>when Google indicates that a privacy options entry point is required, provide a visible in-app control (planned location: <strong>Settings</strong>) that re-opens Google’s privacy options form.</li>
+      </ul>
+      <p>You may also use Apple’s platform privacy controls where applicable, and any controls described by Google.</p>
+      <p><strong>App Tracking Transparency (ATT):</strong> this draft does <strong>not</strong> state that ProVerbs uses ATT, and does <strong>not</strong> state that it never will. Whether an ATT prompt appears depends on the final shipping configuration and Apple’s rules. If ATT is enabled, this policy will be updated to describe it, including the purpose string shown to users. Until then, ATT use is <strong>unconfirmed</strong>.</p>
+    </section>
+
+    <section aria-labelledby="s-purchases">
+      <h2 id="s-purchases">5. Purchases and Apple subscriptions</h2>
+      <p>The monetised release is intended to offer an optional auto-renewable subscription that removes advertising. Learning features remain available without a subscription.</p>
+      <p><strong>Confirmed in the current ProVerbs codebase (StoreKit plumbing):</strong> the app includes StoreKit&nbsp;2 logic for loading the product
+        <code>com.proverbs.ProVerbs.adfree.monthly</code>, purchasing, restoring purchases, listening for transaction updates, refreshing entitlements, and opening Apple’s manage-subscriptions sheet. Release monetisation is still gated off until deliberately enabled for a public build.</p>
+      <p>When the subscription is offered publicly:</p>
+      <ul>
+        <li>payment is processed by <strong>Apple</strong>, not by Akerez Software</li>
+        <li>Apple provides purchase and entitlement status to the app so advertising can be removed for entitled users</li>
+        <li>we do not receive your full payment card details</li>
+        <li>you can use Restore Purchases in the app when the subscription UI is enabled</li>
+        <li>you can manage or cancel in your Apple&nbsp;ID subscription settings</li>
+      </ul>
+      <p>Apple’s handling of payment and Apple&nbsp;ID data is described in
+        <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a>.
+        Manage subscriptions at
+        <a href="https://apps.apple.com/account/subscriptions" rel="noopener noreferrer">apps.apple.com/account/subscriptions</a>.
+      </p>
+      <p>More product help is available on the
+        <a href="https://akerez.com/support/">ProVerbs Support</a> page.
+      </p>
     </section>
 
     <section aria-labelledby="s-support">
-      <h2 id="s-support">4. Information you send when contacting support</h2>
+      <h2 id="s-support">6. Information you send when contacting support</h2>
       <p>If you email <a href="mailto:support@akerez.com">support@akerez.com</a> or use the in-app feedback composer, you choose what to send. That may include your email address, device information, the ProVerbs version, a description of a problem, and optional screenshots or question details.</p>
       <p>We use that information only to respond to your request and improve ProVerbs. Please do not include passwords, payment card numbers or other sensitive credentials.</p>
     </section>
 
-    <section aria-labelledby="s-purchases">
-      <h2 id="s-purchases">5. Purchases and Apple services</h2>
-      <p>The current production configuration of ProVerbs does not offer in-app purchases or display advertising. Purchase and subscription interfaces are disabled in Release builds until monetisation is deliberately enabled.</p>
-      <p>ProVerbs includes Apple’s StoreKit framework so that an optional ad-free subscription can be offered in a future update. If and when a subscription is available:</p>
-      <ul>
-        <li>payment is processed by Apple, not by Akerez Software</li>
-        <li>Apple provides purchase and entitlement status to the app so features can unlock correctly</li>
-        <li>we do not receive your full payment card details</li>
-      </ul>
-      <p>Apple’s handling of payment and Apple&nbsp;ID data is described in
-        <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a>.
-        You can manage subscriptions at
-        <a href="https://apps.apple.com/account/subscriptions" rel="noopener noreferrer">apps.apple.com/account/subscriptions</a>.
-      </p>
-    </section>
-
-    <section aria-labelledby="s-ads">
-      <h2 id="s-ads">6. Advertising</h2>
-      <p>The current App Store release does not load or display advertisements. Google Mobile Ads (AdMob) is not linked as a package dependency in the shipping project, and production ad units are not configured.</p>
-      <p>If a future version introduces advertising, we will update this Privacy Policy before or when that change ships, including the name of any advertising partner and related choices such as tracking permission where required.</p>
-    </section>
-
     <section aria-labelledby="s-network">
-      <h2 id="s-network">7. Network activity and third parties</h2>
-      <p>Learning content used by ProVerbs (verb forms, meanings and sentence translations) is packaged with the app for offline use. An optional remote learning-pack download URL can be configured in a future build; it is not configured in the current Info.plist, so the app does not download curriculum packs from a remote host today.</p>
-      <p>System features you choose to use may involve Apple services outside Akerez Software’s control, for example:</p>
-      <ul>
-        <li>Mail or another email app when you send feedback</li>
-        <li>App Store / StoreKit when purchases are offered</li>
-        <li>iOS itself (backup, Focus modes, keyboard, and similar device features)</li>
-      </ul>
-      <p>Those services are governed by Apple’s terms and privacy policy.</p>
+      <h2 id="s-network">7. Network activity and other third parties</h2>
+      <p>Learning content used by ProVerbs (verb forms, meanings and sentence translations) is packaged with the app for offline use. An optional remote learning-pack download URL can be configured; it is not required for core offline practice.</p>
+      <p>When advertising and UMP are enabled in a released build, the app will communicate with Google’s advertising and consent services as described in Sections&nbsp;3–4. System features you choose to use may also involve Apple services (for example Mail, App Store / StoreKit, backup, keyboard, Focus modes).</p>
     </section>
 
     <section aria-labelledby="s-website">
       <h2 id="s-website">8. This website</h2>
-      <p>The Akerez Software website is static HTML. It does not set cookies, does not embed third-party analytics or advertising scripts, and does not include a contact form that posts data to an Akerez server. Your web host or browser may still produce ordinary technical logs (such as IP address and requested URL) according to that host’s practices; Akerez Software does not operate a separate visitor-analytics product on this site.</p>
+      <p>The Akerez Software website is static HTML. These privacy pages do not set cookies, do not embed third-party analytics or advertising scripts, and do not include a contact form that posts data to an Akerez server. Your web host or browser may still produce ordinary technical logs (such as IP address and requested URL) according to that host’s practices.</p>
+      <p>This Privacy Policy URL is used as the policy link in Google AdMob privacy messaging. The page does not host ad tags or Funding Choices consent-message tags.</p>
+    </section>
+
+    <section aria-labelledby="s-asc">
+      <h2 id="s-asc">9. App Store privacy disclosures (alignment note)</h2>
+      <p>After the Google Mobile Ads SDK (and UMP, if used) are integrated in the binary submitted to Apple, App Store Connect → App Privacy answers must be reviewed against:</p>
+      <ul>
+        <li>Google’s
+          <a href="https://developers.google.com/admob/ios/privacy/data-disclosure" rel="noopener noreferrer">data disclosure guidance</a>
+          (categories such as Device ID, Advertising Data, Product Interaction, Performance Data, Diagnostics, and coarse location derived from IP, as described by Google);</li>
+        <li>whether data is used for Tracking under Apple’s definition (including any ATT configuration);</li>
+        <li>Apple StoreKit purchase-related disclosures; and</li>
+        <li>the privacy manifest(s) embedded in the submitted archive.</li>
+      </ul>
+      <p>Those App Store Connect answers are <strong>not</strong> filled in by this draft and must not be guessed in advance of the final SDK configuration.</p>
     </section>
 
     <section aria-labelledby="s-retention">
-      <h2 id="s-retention">9. Retention</h2>
+      <h2 id="s-retention">10. Retention</h2>
       <p>Local app data remains on your device until you delete it or uninstall the app. Support emails are retained only as long as needed to handle your request and maintain a minimal record of correspondence, then deleted or archived according to ordinary business practice.</p>
+      <p>We do not state retention periods for information processed by Google or Apple under their own services; those periods are governed by their respective policies.</p>
     </section>
 
     <section aria-labelledby="s-children">
-      <h2 id="s-children">10. Children</h2>
-      <p>ProVerbs is an educational tool and does not knowingly collect personal information from children online. Practice data created in the app remains on the device. If you believe a child has sent personal information to support@akerez.com, contact us and we will delete it from our email records when appropriate.</p>
+      <h2 id="s-children">11. Children</h2>
+      <p>ProVerbs is an educational tool. Practice data created in the app remains on the device. We do not knowingly solicit personal information from children through an Akerez account system. If you believe a child has sent personal information to support@akerez.com, contact us and we will delete it from our email records when appropriate. Advertising and subscription availability may be limited by Apple’s age rating and platform rules.</p>
     </section>
 
     <section aria-labelledby="s-security">
-      <h2 id="s-security">11. Security</h2>
-      <p>We rely on iOS sandboxing and standard Apple storage APIs for on-device data. No method of electronic storage is perfectly secure. Protect your device with a passcode or biometric lock and keep iOS updated.</p>
+      <h2 id="s-security">12. Security</h2>
+      <p>We rely on iOS sandboxing and standard Apple storage APIs for on-device data. No method of electronic storage or transmission is perfectly secure. Protect your device with a passcode or biometric lock and keep iOS updated.</p>
     </section>
 
     <section aria-labelledby="s-international">
-      <h2 id="s-international">12. International availability</h2>
-      <p>ProVerbs may be downloaded from the App Store in multiple countries. Because practice data is stored on your device, it is processed where your device is located. If you email support, your message is received by Akerez Software and may be handled in the country where support email is accessed.</p>
+      <h2 id="s-international">13. International availability</h2>
+      <p>When ProVerbs is available on the App Store, it may be offered in multiple countries. On-device practice data is processed where your device is located. If you email support, your message is received by Diana Zaluzhna, operating as Akerez Software, and may be handled in the country where support email is accessed. When advertising is enabled, Google may process advertising-related information in the locations described in Google’s policies.</p>
     </section>
 
     <section aria-labelledby="s-choices">
-      <h2 id="s-choices">13. Your choices</h2>
+      <h2 id="s-choices">14. Your choices</h2>
       <ul>
         <li>Delete ProVerbs or its on-device data to remove local practice history</li>
         <li>Change language and appearance in the app settings</li>
-        <li>Choose whether to enable practice aids such as translations where the app provides that control</li>
-        <li>Manage any future Apple subscription through Apple’s subscription settings</li>
+        <li>When UMP ships in the app: use the in-app privacy options control when Google requires it</li>
+        <li>If ATT is shown in a future configuration: respond to Apple’s prompt</li>
+        <li>When the subscription is offered: subscribe, restore purchases, or manage / cancel through Apple</li>
         <li>Contact us at support@akerez.com with privacy questions</li>
       </ul>
     </section>
 
     <section aria-labelledby="s-changes">
-      <h2 id="s-changes">14. Changes to this policy</h2>
-      <p>We may update this Privacy Policy when ProVerbs or this website changes in a way that affects privacy. The effective date at the top of the page will be revised when we publish changes. Continued use of ProVerbs after an update means you should review the revised policy.</p>
+      <h2 id="s-changes">15. Changes to this policy</h2>
+      <p>We will revise this Privacy Policy when the monetised build’s code and AdMob configuration are verified, when this draft notice is removed for publication, and whenever ProVerbs or this website changes in a way that affects privacy. The date at the top of the page will be updated when changes are published.</p>
     </section>
 
     <section aria-labelledby="s-contact">
-      <h2 id="s-contact">15. Contact</h2>
-      <p>Akerez Software<br>
+      <h2 id="s-contact">16. Contact</h2>
+      <p>Diana Zaluzhna, operating as Akerez Software<br>
+        Brand: Akerez Software (not confirmed here as a separately registered company)<br>
         Email: <a href="mailto:support@akerez.com?subject=ProVerbs%20Privacy">support@akerez.com</a><br>
         Product: ProVerbs for iOS<br>
-        Website: <a href="https://akerez.com/">https://akerez.com/</a>
+        Website: <a href="https://akerez.com/">https://akerez.com/</a><br>
+        Privacy Policy URL: <a href="https://akerez.com/privacy/">https://akerez.com/privacy/</a>
       </p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>© 2026 Akerez Software</p>
+    <div class="shell site-footer__inner">
+      <div>
+        <span class="wordmark wordmark--light" role="img" aria-label="AKEREZ"></span>
+        <p data-i18n="footer.tag">Thoughtful digital products.</p>
+      </div>
       <nav aria-label="Footer">
-        <a href="/proverbs/">ProVerbs</a>
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
+        <a href="/products/" data-i18n="nav.products">Products</a>
+        <a href="/work/" data-i18n="nav.work">Work</a>
+        <a href="/about/" data-i18n="nav.about">About</a>
+        <a href="/contact/" data-i18n="nav.contact">Contact</a>
+        <a href="/support/" data-i18n="footer.support">Support</a>
+        <a href="/privacy/" data-i18n="footer.privacy">Privacy</a>
       </nav>
+      <div class="footer-meta">
+        <a href="mailto:support@akerez.com">support@akerez.com</a>
+        <p>© <span id="year">2026</span> AKEREZ</p>
+      </div>
     </div>
   </footer>
+  <script src="/assets/messages.js"></script>
+  <script src="/assets/catalog.js"></script>
+  <script src="/assets/site.js"></script>
 </body>
 </html>
